@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BeFine">
         <activity
-            android:name=".Exercicio1Activity"
+            android:name="br.com.rev.befine.ui.activity.Exercicio1Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

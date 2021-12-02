@@ -1,11 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Exercicio1Activity">
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.activity.Exercicio1Activity">
 
 
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/instrucoes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp">
+
+                <TextView
+                    android:id="@+id/instrucoes_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Instruções:"
+                    android:textAlignment="textStart"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/instrucoes1_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="1.Inspire e expire em sincronia com a animação"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/instrucoes_text"
+                    app:layout_constraintStart_toStartOf="@+id/instrucoes_text"
+                    app:layout_constraintTop_toBottomOf="@+id/instrucoes_text" />
+
+                <TextView
+                    android:id="@+id/instrucoes2_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="2.Enquanto inspira conte ate 5 mentalmente"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/instrucoes_text"
+                    app:layout_constraintStart_toStartOf="@+id/instrucoes_text"
+                    app:layout_constraintTop_toBottomOf="@+id/instrucoes1_text" />
+
+                <TextView
+                    android:id="@+id/instrucoes3_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="3.Faça isso por 1 minuto"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/instrucoes_text"
+                    app:layout_constraintStart_toStartOf="@+id/instrucoes_text"
+                    app:layout_constraintTop_toBottomOf="@+id/instrucoes2_text" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/gif_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/instrucoes"
+            app:layout_constraintStart_toStartOf="@id/instrucoes"
+            app:layout_constraintTop_toBottomOf="@+id/instrucoes"
+            tools:srcCompat="@drawable/respiracao" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
